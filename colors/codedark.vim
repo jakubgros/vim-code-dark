@@ -101,6 +101,8 @@ let s:cdDiffGreenLight = {'gui': '#0f4701', 'cterm': s:cterm09, 'cterm256': '58'
 let s:cdSearchCurrent = {'gui': '#4B5632', 'cterm': s:cterm09, 'cterm256': '58'} 
 let s:cdSearch = {'gui': '#264F78', 'cterm': s:cterm03, 'cterm256': '24'}
 
+let s:cdHopMarkYellow = {'gui': '#F6BE00', 'cterm': s:cterm0A, 'cterm256': '214'}
+
 " Syntax colors:
 
 if !exists("g:codedark_conservative")
@@ -128,6 +130,9 @@ if g:codedark_conservative | let s:cdPink = s:cdBlue | endif
 
 " Vim editor colors
 "    <sid>hi(GROUP, FOREGROUND, BACKGROUND, ATTRIBUTE, SPECIAL)
+call <sid>hi('HopNextKey', s:cdHopMarkYellow, s:cdBack, 'none', {})
+call <sid>hi('HopNextKey1', s:cdHopMarkYellow, s:cdBack, 'none', {})
+call <sid>hi('HopNextKey2', s:cdHopMarkYellow, s:cdBack, 'none', {})
 call <sid>hi('Normal', s:cdFront, s:cdBack, 'none', {})
 call <sid>hi('ColorColumn', {}, s:cdCursorDarkDark, 'none', {})
 call <sid>hi('Cursor', s:cdCursorDark, s:cdCursorLight, 'none', {})
